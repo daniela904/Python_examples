@@ -16,7 +16,7 @@ print("Prefijos Internacionales")
 print("----------------------------- \n")
 while True:
   ingreso = input("Pais ('q':salir): ").lower()
-  if ingreso == "q" or ingreso=="Q":
+  if ingreso == "q":
     break
     
   valor = prefijo.get(ingreso,"Pais no disponible")
