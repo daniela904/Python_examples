@@ -1,5 +1,5 @@
 #historial de busqueda de prefijos
-prefijo = {
+prefijos = {
   "colombia": 57,
   "peru": 51,
   "argentina": 54,
@@ -19,12 +19,17 @@ while True:
   if ingreso == "q":
     break
     
-  valor = prefijo.get(ingreso,"Pais no disponible")
+  valor = prefijos.get(ingreso,"Pais no disponible")
   print("{}:{}".format(ingreso,valor), "\n")
 
   #Contador de busquedas
-  print("Registro de busquedas")
+  print("Registro de busquedas por el pais buscado:")
   busqueda.setdefault(ingreso,0)
   busqueda[ingreso] += 1
   print("{}:{}".format(ingreso,busqueda[ingreso]))
   print("----------------------------- \n")
+
+  print("Registro de busquedas por paises:")
+  for pais,prefijo in busqueda.items():
+    print("{}:{}".format(pais,prefijo))
+  print("---------------------------------------------- \n")
